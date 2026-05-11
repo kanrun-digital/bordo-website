@@ -758,7 +758,7 @@
     aspect-ratio:1/1;position:relative;background:var(--c-cream-base);
     overflow:hidden;
   }
-  .map svg{width:100%;height:100%;display:block}
+  .map svg, .map iframe{width:100%;height:100%;display:block;border:0}
   .map .pin{
     position:absolute;top:50%;left:54%;transform:translate(-50%,-100%);
     width:40px;height:40px;border-radius:50%;
@@ -1533,28 +1533,12 @@
 
     <div class="loc-grid">
       <div class="map" aria-label="Mapa Wrocław Jagiełły 3/7">
-        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(184,149,106,.18)" stroke-width="1"/>
-            </pattern>
-          </defs>
-          <rect width="400" height="400" fill="#F0E6D6"/>
-          <rect width="400" height="400" fill="url(#grid)"/>
-          <path d="M -10 240 Q 100 220, 180 250 T 410 230 L 410 280 Q 300 270, 200 295 T -10 290 Z" fill="#D4C4A8" opacity=".7"/>
-          <path d="M 0 80 L 400 110" stroke="#E8DCC4" stroke-width="2"/>
-          <path d="M 80 0 L 110 400" stroke="#E8DCC4" stroke-width="2"/>
-          <path d="M 220 0 L 240 400" stroke="#E8DCC4" stroke-width="2"/>
-          <path d="M 0 170 L 400 180" stroke="#E8DCC4" stroke-width="3"/>
-          <path d="M 0 350 L 400 360" stroke="#E8DCC4" stroke-width="2"/>
-          <rect x="120" y="120" width="80" height="40" fill="#E8DCC4" opacity=".5"/>
-          <rect x="250" y="125" width="60" height="40" fill="#E8DCC4" opacity=".5"/>
-          <rect x="120" y="190" width="100" height="50" fill="#E8DCC4" opacity=".5"/>
-          <rect x="260" y="190" width="80" height="40" fill="#E8DCC4" opacity=".5"/>
-          <text x="50" y="100" font-family="JetBrains Mono" font-size="9" fill="#8A7E6E" letter-spacing="1">RYNEK</text>
-          <text x="320" y="380" font-family="JetBrains Mono" font-size="9" fill="#8A7E6E" letter-spacing="1">ODRA</text>
-        </svg>
-        <div class="pin">B</div>
+        <iframe
+          src="https://www.google.com/maps?q=W%C5%82adys%C5%82awa+Jagie%C5%82%C5%82y+3%2F7%2C+50-201+Wroc%C5%82aw&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Mapa — Bordo Beauty Studio, Władysława Jagiełły 3/7, Wrocław"></iframe>
       </div>
 
       <div class="loc-info">
