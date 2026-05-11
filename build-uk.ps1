@@ -11,16 +11,16 @@ $h = $h.Replace('<title>Bordo — Studio urody we Wrocławiu · Rzęsy, Brwi, La
                 '<title>Bordo — Студія краси у Вроцлаві · Вії, Брови, Лазер</title>')
 $h = $h.Replace('Bordo — studio urody w sercu Wrocławia. Przedłużanie rzęs, stylizacja brwi, depilacja laserowa, makijaż. Władysława Jagiełły 3/7 · Śródmieście. Obsługa po polsku i ukraińsku.',
                 'Bordo — студія краси у серці Вроцлава. Нарощування вій, стилізація брів, лазерна епіляція, макіяж. Władysława Jagiełły 3/7 · Śródmieście. Обслуговування українською та польською.')
-$h = $h.Replace('<link rel="canonical" href="https://bordo.studio/">',
-                '<link rel="canonical" href="https://bordo.studio/uk/">')
-$h = $h.Replace('<meta property="og:url" content="https://bordo.studio/">',
-                '<meta property="og:url" content="https://bordo.studio/uk/">')
+$h = $h.Replace('<link rel="canonical" href="https://youngandbeautiful.pl/">',
+                '<link rel="canonical" href="https://youngandbeautiful.pl/uk/">')
+$h = $h.Replace('<meta property="og:url" content="https://youngandbeautiful.pl/">',
+                '<meta property="og:url" content="https://youngandbeautiful.pl/uk/">')
 
 # === JSON-LD: UA-specific url + inLanguage + description ===
-$h = $h.Replace('"@id": "https://bordo.studio/#salon"',
-                '"@id": "https://bordo.studio/uk/#salon"')
-$h = $h.Replace('"@id": "https://bordo.studio/#faq"',
-                '"@id": "https://bordo.studio/uk/#faq"')
+$h = $h.Replace('"@id": "https://youngandbeautiful.pl/#salon"',
+                '"@id": "https://youngandbeautiful.pl/uk/#salon"')
+$h = $h.Replace('"@id": "https://youngandbeautiful.pl/#faq"',
+                '"@id": "https://youngandbeautiful.pl/uk/#faq"')
 $h = $h.Replace('"inLanguage": "pl-PL"',
                 '"inLanguage": "uk-UA"')
 $h = $h.Replace('"description": "Studio urody w sercu Wrocławia: przedłużanie i laminacja rzęs, stylizacja i laminacja brwi, depilacja laserowa, makijaż. Trzy poziomy mistrzów (Junior · Top · Art). Obsługa po polsku i ukraińsku."',
@@ -43,8 +43,8 @@ $h = $h.Replace('{"@type":"Question","name":"W jakim języku możemy się porozu
                 '{"@type":"Question","name":"Якою мовою ми можемо спілкуватися?","acceptedAnswer":{"@type":"Answer","text":"Польська та українська. Кожен майстер говорить обома мовами — не загубиш нюансів консультації."}}')
 $h = $h.Replace('{"@type":"Question","name":"Czy mogę odwołać wizytę?","acceptedAnswer":{"@type":"Answer","text":"Tak, do 24 godzin przed wizytą — bezpłatnie. Później zatrzymujemy 50% kaucji. Pierwsza rezerwacja zawsze bez kaucji."}}',
                 '{"@type":"Question","name":"Чи можна скасувати візит?","acceptedAnswer":{"@type":"Answer","text":"Так, до 24 годин до візиту — безкоштовно. Пізніше утримуємо 50% застави. Перший запис завжди без застави."}}')
-$h = $h.Replace('"url": "https://bordo.studio/"',
-                '"url": "https://bordo.studio/uk/"')
+$h = $h.Replace('"url": "https://youngandbeautiful.pl/"',
+                '"url": "https://youngandbeautiful.pl/uk/"')
 $h = $h.Replace('<meta property="og:locale" content="pl_PL">',
                 '<meta property="og:locale" content="uk_UA">')
 $h = $h.Replace('<meta property="og:locale:alternate" content="uk_UA">',
