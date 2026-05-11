@@ -84,8 +84,8 @@ $h = $h.Replace('Rzęsy, brwi i&nbsp;depilacja laserowa —<br>
       <em>без поспіху, без зірочок.</em>')
 $h = $h.Replace('90 minut spokoju w&nbsp;centrum Wrocławia.<br>Wychodzisz z&nbsp;efektem, którego nie trzeba tłumaczyć znajomym.',
                 '90 хвилин спокою у&nbsp;центрі Вроцлава.<br>Виходиш із&nbsp;ефектом, який не треба пояснювати подругам.')
-$h = $h.Replace('Władysława Jagiełły 3/7 · wejście z&nbsp;ulicy · 3. piętro',
-                'Władysława Jagiełły 3/7 · вхід з&nbsp;вулиці · 3-й поверх')
+$h = $h.Replace('Władysława Jagiełły 3/7 · wejście z&nbsp;ulicy',
+                'Władysława Jagiełły 3/7 · вхід з&nbsp;вулиці')
 $h = $h.Replace('class="btn btn-primary" data-cta="hero-primary">Umów pierwszą wizytę</a>',
                 'class="btn btn-primary" data-cta="hero-primary">Записатися на перший візит</a>')
 $h = $h.Replace('class="btn btn-outline-mute">Zobacz usługi</a>',
@@ -98,8 +98,8 @@ $h = $h.Replace('<strong>Konsultacja gratis</strong>Kilka minut na rozmowę prze
                 '<strong>Консультація безкоштовно</strong>Кілька хвилин на розмову перед дотиком.')
 $h = $h.Replace('<strong>Test alergiczny</strong>Przed pierwszym zabiegiem — bez opłaty.',
                 '<strong>Алергопроба</strong>Перед першою процедурою — безкоштовно.')
-$h = $h.Replace('<strong>Łatwo nas znaleźć</strong>Bordowe drzwi · 3. piętro · wejście z&nbsp;ulicy.',
-                '<strong>Нас легко знайти</strong>Бордові двері · 3-й поверх · вхід з&nbsp;вулиці.')
+$h = $h.Replace('<strong>Łatwo nas znaleźć</strong>Bordowe drzwi · wejście z&nbsp;ulicy.',
+                '<strong>Нас легко знайти</strong>Бордові двері · вхід з&nbsp;вулиці.')
 $h = $h.Replace('<strong>Gwarancja jakości</strong>Nawet do&nbsp;3 tygodni od&nbsp;zabiegu.',
                 '<strong>Гарантія якості</strong>Навіть до&nbsp;3 тижнів від&nbsp;процедури.')
 
@@ -452,8 +452,8 @@ $h = $h.Replace('Znajdź nas <em>w&nbsp;centrum Wrocławia.</em>', 'Знайди
 $h = $h.Replace('aria-label="Mapa Wrocław Jagiełły 3/7"', 'aria-label="Мапа Вроцлав, Ягеллі 3/7"')
 $h = $h.Replace('<div class="caption" style="margin-bottom:14px">Adres</div>',
                 '<div class="caption" style="margin-bottom:14px">Адреса</div>')
-$h = $h.Replace('2 minuty od Rynku · 5 min od Dworca Głównego.<br>Wejście z&nbsp;ulicy → 3. piętro.',
-                '2 хвилини від Ринку · 5 хв від Головного вокзалу.<br>Вхід з&nbsp;вулиці → 3-й поверх.')
+$h = $h.Replace('2 minuty od Rynku · 5 min od Dworca Głównego.<br>Wejście z&nbsp;ulicy.',
+                '2 хвилини від Ринку · 5 хв від Головного вокзалу.<br>Вхід з&nbsp;вулиці.')
 $h = $h.Replace('<div class="lbl">Godziny pracy</div>', '<div class="lbl">Години роботи</div>')
 $h = $h.Replace('<dt>Pon — Pt</dt>', '<dt>Пн — Пт</dt>')
 $h = $h.Replace('<dt>Sobota</dt>', '<dt>Субота</dt>')
