@@ -502,9 +502,19 @@ $h = $h.Replace('<a href="mailto:youngandbeautiful.wro@gmail.com?subject=Pytanie
 $h = $h.Replace('<a href="mailto:youngandbeautiful.wro@gmail.com?subject=Pytanie%20o%20regulamin">Regulamin</a>',
                 '<a href="mailto:youngandbeautiful.wro@gmail.com?subject=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82">Регламент</a>')
 
+# === Cookie consent footer link (banner texts are translated in consent.js by <html lang>) ===
+$h = $h.Replace('<a href="#" data-bc-open>Ustawienia cookies</a>',
+                '<a href="#" data-bc-open>Налаштування cookies</a>')
+
+# === Google Maps embed: locale params + title ===
+$h = $h.Replace('!3m2!1spl!2spl!4v', '!3m2!1suk!2spl!4v')
+$h = $h.Replace('!5m2!1spl!2spl', '!5m2!1suk!2spl')
+$h = $h.Replace('title="Mapa · Bordo Beauty Studio, Władysława Jagiełły 3/7, Wrocław"',
+                'title="Мапа · Bordo Beauty Studio, Władysława Jagiełły 3/7, Вроцлав"')
+
 # === Sticky mobile ===
 $h = $h.Replace('class="btn btn-primary" data-cta="sticky-booksy">Zarezerwuj</a>',
                 'class="btn btn-primary" data-cta="sticky-booksy">Записатися</a>')
 
-[System.IO.File]::WriteAllText($dst, $h, (New-Object System.Text.UTF8Encoding $false))
+[System.IO.File]::WriteAllText($dst, $h, (New-Object System.Text.UTF8Encoding $true))
 "UA built: $dst ($([System.IO.File]::ReadAllBytes($dst).Length) bytes)"
