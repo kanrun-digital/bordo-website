@@ -624,12 +624,12 @@
   }
   .price-row{
     display:flex;align-items:baseline;gap:8px;padding:16px 0;
-    border-bottom:1px solid var(--c-champagne);
+    border-bottom:1px solid var(--c-champagne);flex-wrap:wrap;
   }
   .price-row:last-of-type{border-bottom:none}
-  .price-row .name{font-size:15px;color:var(--c-charcoal);flex-shrink:0}
-  .price-row .leader{flex:1;border-bottom:1px dotted var(--c-warm-sand);transform:translateY(-4px);min-width:24px;opacity:.6}
-  .price-row .amt{font-family:var(--f-display);font-weight:500;font-size:22px;color:var(--c-bordeaux-deep);white-space:nowrap}
+  .price-row .name{font-size:15px;color:var(--c-charcoal);flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+  .price-row .leader{flex:1 1 24px;border-bottom:1px dotted var(--c-warm-sand);transform:translateY(-4px);min-width:24px;opacity:.6}
+  .price-row .amt{font-family:var(--f-display);font-weight:500;font-size:22px;color:var(--c-bordeaux-deep);white-space:nowrap;margin-left:auto}
 
   /* Tier-row: 3 prices (Start · Top · Art) inline */
   .price-row.tiered{display:block}
