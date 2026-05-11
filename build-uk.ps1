@@ -1,4 +1,4 @@
-﻿# Builds UA version from current PL index.html.
+# Builds UA version from current PL index.html.
 # Re-run any time PL is updated.
 $src = 'D:\bordo salon\site\index.html'
 $dst = 'D:\bordo salon\site\uk\index.html'
