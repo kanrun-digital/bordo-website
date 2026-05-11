@@ -452,8 +452,8 @@ $h = $h.Replace('Znajdź nas <em>w&nbsp;centrum Wrocławia.</em>', 'Знайди
 $h = $h.Replace('aria-label="Mapa Wrocław Jagiełły 3/7"', 'aria-label="Мапа Вроцлав, Ягеллі 3/7"')
 $h = $h.Replace('<div class="caption" style="margin-bottom:14px">Adres</div>',
                 '<div class="caption" style="margin-bottom:14px">Адреса</div>')
-$h = $h.Replace('2 minuty od Rynku · 5 min od Dworca Głównego.<br>Wjazd do bramy → 3. piętro → drzwi 7.',
-                '2 хвилини від Ринку · 5 хв від Головного вокзалу.<br>Через браму → 3-й поверх → двері 7.')
+$h = $h.Replace('2 minuty od Rynku · 5 min od Dworca Głównego.<br>Wejście z&nbsp;ulicy → 3. piętro.',
+                '2 хвилини від Ринку · 5 хв від Головного вокзалу.<br>Вхід з&nbsp;вулиці → 3-й поверх.')
 $h = $h.Replace('<div class="lbl">Godziny pracy</div>', '<div class="lbl">Години роботи</div>')
 $h = $h.Replace('<dt>Pon — Pt</dt>', '<dt>Пн — Пт</dt>')
 $h = $h.Replace('<dt>Sobota</dt>', '<dt>Субота</dt>')
