@@ -1,0 +1,3 @@
+# Cloudflare Pages / Netlify redirects
+/ru          /uk/   301
+/ru/*        /uk/   301
