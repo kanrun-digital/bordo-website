@@ -175,13 +175,13 @@ $h = $h.Replace('Cztery kierunki, jedna estetyka. Pracujemy bez pośpiechu, z ko
                 'Чотири напрями, одна естетика. Працюємо без поспіху, з&nbsp;консультацією на початку та&nbsp;смачною кавою чи&nbsp;чаєм ☕️')
 $h = $h.Replace('<div class="caption">Procedura · 90–120 min</div>
         <div class="title">Rzęsy</div>
-        <div class="desc">Naturalne lub spektakularne, efekt na trzy do czterech tygodni.</div>',
+        <div class="desc">Naturalne lub spektakularne, efekt do 5 tygodni.</div>',
                 '<div class="caption">Процедура · 90–120 хв</div>
         <div class="title">Вії</div>
-        <div class="desc">Натуральні або яскраві, ефект на три-чотири тижні.</div>')
+        <div class="desc">Натуральні або яскраві, ефект до 5 тижнів.</div>')
 $h = $h.Replace('<div class="caption">Procedura · 60 min</div>
         <div class="title">Brwi</div>
-        <div class="desc">Architektura, henna pudrowa, laminacja, naturalna forma na każdy dzień.</div>',
+        <div class="desc">Architektura, henna, laminacja, naturalna forma na każdy dzień.</div>',
                 '<div class="caption">Процедура · 60 хв</div>
         <div class="title">Брови</div>
         <div class="desc">Архітектура, пудрова хна, ламінація, натуральна форма на кожен день.</div>')
