@@ -425,8 +425,9 @@
 
   .service{display:flex;flex-direction:column;text-align:left}
   .service-photo{aspect-ratio:3/4;margin-bottom:28px;overflow:hidden}
-  .service-photo .ph{transition:transform 600ms ease}
-  .service:hover .service-photo .ph{transform:scale(1.02)}
+  .service-photo picture{display:block;width:100%;height:100%}
+  .service-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 600ms ease}
+  .service:hover .service-img{transform:scale(1.03)}
   .service .caption{margin-bottom:14px}
   .service .title{font-family:var(--f-display);font-size:30px;font-weight:400;color:var(--c-charcoal);line-height:1.1;margin-bottom:16px}
   .service .desc{color:var(--c-graphite);font-size:14px;line-height:1.7;margin-bottom:24px;flex:1}
@@ -1029,7 +1030,12 @@
 
     <div class="services">
       <a href="#pricing" class="service">
-        <div class="service-photo"><div class="ph"><div class="ph-label">rzęsy · macro</div></div></div>
+        <div class="service-photo">
+          <picture>
+            <source srcset="/assets/rzesy.webp" type="image/webp">
+            <img src="/assets/rzesy.jpg" alt="Вії" loading="lazy" decoding="async" class="service-img">
+          </picture>
+        </div>
         <div class="caption">Процедура · 90–120 хв</div>
         <div class="title">Вії</div>
         <div class="desc">Натуральні або яскраві, ефект на три-чотири тижні.</div>
@@ -1040,7 +1046,12 @@
       </a>
 
       <a href="#pricing" class="service">
-        <div class="service-photo"><div class="ph"><div class="ph-label">brwi · macro</div></div></div>
+        <div class="service-photo">
+          <picture>
+            <source srcset="/assets/brwi.webp" type="image/webp">
+            <img src="/assets/brwi.jpg" alt="Брови" loading="lazy" decoding="async" class="service-img">
+          </picture>
+        </div>
         <div class="caption">Процедура · 60 хв</div>
         <div class="title">Брови</div>
         <div class="desc">Архітектура, пудрова хна, ламінація, натуральна форма на кожен день.</div>
@@ -1051,7 +1062,12 @@
       </a>
 
       <a href="#pricing" class="service">
-        <div class="service-photo"><div class="ph"><div class="ph-label">laser · zabieg</div></div></div>
+        <div class="service-photo">
+          <picture>
+            <source srcset="/assets/laser.webp" type="image/webp">
+            <img src="/assets/laser.jpg" alt="Лазер" loading="lazy" decoding="async" class="service-img">
+          </picture>
+        </div>
         <div class="caption">Процедура · 15–60 хв</div>
         <div class="title">Лазер</div>
         <div class="desc">Безпечно, безболісно, для будь-якого типу шкіри, з тестом перед циклом.</div>
@@ -1062,7 +1078,12 @@
       </a>
 
       <a href="#pricing" class="service">
-        <div class="service-photo"><div class="ph"><div class="ph-label">makijaż · editorial</div></div></div>
+        <div class="service-photo">
+          <picture>
+            <source srcset="/assets/makijaz.webp" type="image/webp">
+            <img src="/assets/makijaz.jpg" alt="Макіяж" loading="lazy" decoding="async" class="service-img">
+          </picture>
+        </div>
         <div class="caption">Процедура · 60–90 хв</div>
         <div class="title">Макіяж</div>
         <div class="desc">Експрес, денний, вечірній, весільний, з&nbsp;консультацією тону та&nbsp;пробою.</div>
