@@ -181,7 +181,7 @@ $h = $h.Replace('<div class="caption">Procedura · 90–120 min</div>
         <div class="desc">Натуральні або яскраві, ефект на три-чотири тижні.</div>')
 $h = $h.Replace('<div class="caption">Procedura · 60 min</div>
         <div class="title">Brwi</div>
-        <div class="desc">Architektura, henna pudrowa, laminacja, naturalna forma na każdy dzień.</div>',
+        <div class="desc">Architektura, henna, laminacja, regulacia, naturalna forma na każdy dzień.</div>',
                 '<div class="caption">Процедура · 60 хв</div>
         <div class="title">Брови</div>
         <div class="desc">Архітектура, пудрова хна, ламінація, натуральна форма на кожен день.</div>')
