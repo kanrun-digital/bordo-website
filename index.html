@@ -588,6 +588,8 @@
 
   .ba-pair{display:grid;grid-template-columns:1fr 1fr;position:relative;aspect-ratio:1/1;gap:1px;background:var(--c-gold-antique)}
   .ba-pair > .ph{position:relative}
+  .ba-img{display:block;width:100%;height:100%;overflow:hidden}
+  .ba-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
   .ba-pair .tag{
     position:absolute;top:14px;font-family:var(--f-mono);font-size:9px;
     letter-spacing:.24em;text-transform:uppercase;color:var(--c-mute);
@@ -1187,8 +1189,8 @@
       <div class="ba-card">
         <div class="ba-pair">
           <span class="tag l">Przed</span><span class="tag r">Po</span>
-          <div class="ph"><div class="ph-label">rzęsy 2D · before</div></div>
-          <div class="ph"><div class="ph-label">rzęsy 2D · after</div></div>
+          <picture class="ba-img"><source srcset="/assets/rzesy-anna-do.webp" type="image/webp"><img src="/assets/rzesy-anna-do.jpg" alt="Rzęsy 2D przed" loading="lazy" decoding="async" class="ba-photo"></picture>
+          <picture class="ba-img"><source srcset="/assets/rzesy-anna-posle.webp" type="image/webp"><img src="/assets/rzesy-anna-posle.jpg" alt="Rzęsy 2D po" loading="lazy" decoding="async" class="ba-photo"></picture>
         </div>
         <div class="ba-meta"><div class="lbl">Rzęsy 2D · Anna · 2026</div><a href="https://youngandbeautiful.booksy.com/a/" target="_blank" rel="noopener" class="text-link" data-cta="ba-card">Zarezerwuj efekt</a></div>
       </div>
@@ -1196,7 +1198,7 @@
         <div class="ba-pair">
           <span class="tag l">Przed</span><span class="tag r">Po</span>
           <div class="ph"><div class="ph-label">brwi laminacja · before</div></div>
-          <div class="ph"><div class="ph-label">brwi laminacja · after</div></div>
+          <picture class="ba-img"><source srcset="/assets/brwi-henna.webp" type="image/webp"><img src="/assets/brwi-henna.jpg" alt="Brwi henna po" loading="lazy" decoding="async" class="ba-photo"></picture>
         </div>
         <div class="ba-meta"><div class="lbl">Brwi · Karolina · 2026</div><a href="https://youngandbeautiful.booksy.com/a/" target="_blank" rel="noopener" class="text-link" data-cta="ba-card">Zarezerwuj efekt</a></div>
       </div>
@@ -1212,7 +1214,7 @@
         <div class="ba-pair">
           <span class="tag l">Przed</span><span class="tag r">Po</span>
           <div class="ph"><div class="ph-label">laser · sesja 4</div></div>
-          <div class="ph"><div class="ph-label">laser · po cyklu</div></div>
+          <picture class="ba-img"><source srcset="/assets/depilacia.webp" type="image/webp"><img src="/assets/depilacia.jpg" alt="Depilacja laserowa po" loading="lazy" decoding="async" class="ba-photo"></picture>
         </div>
         <div class="ba-meta"><div class="lbl">Laser · Klientka · 2026</div><a href="https://youngandbeautiful.booksy.com/a/" target="_blank" rel="noopener" class="text-link" data-cta="ba-card">Zarezerwuj efekt</a></div>
       </div>
