@@ -265,10 +265,105 @@
     window.dataLayer.push(payload);
   };
 
-  /* Optional: auto-track CTA clicks already marked with data-cta in the HTML */
+  /* ---------- Auto-track CTA clicks (semantic event + generic) ----------
+     For every [data-cta] click we fire:
+       1) A specific event based on href: book_click | whatsapp_click | phone_click | email_click
+          → used as Google Ads conversion triggers (primary goals).
+       2) A generic cta_click with cta_id → used in GA4 for funnel analysis.
+     Tracked only after a consent decision (GTM is loaded). */
+  function classifyHref(href) {
+    if (!href) return null;
+    var h = href.toLowerCase();
+    if (h.indexOf('booksy.com') !== -1) return 'book_click';
+    if (h.indexOf('wa.me/') !== -1 || h.indexOf('whatsapp.com') !== -1) return 'whatsapp_click';
+    if (h.indexOf('tel:') === 0) return 'phone_click';
+    if (h.indexOf('mailto:') === 0) return 'email_click';
+    return null;
+  }
   document.addEventListener('click', function (e) {
-    var c = e.target.closest('[data-cta]');
+    var c = e.target.closest('[data-cta], a[href^="tel:"], a[href^="mailto:"], a[href*="booksy.com"], a[href*="wa.me/"]');
     if (!c) return;
-    window.bordoTrack('cta_click', { cta_id: c.getAttribute('data-cta'), cta_text: (c.textContent || '').trim().slice(0, 60) });
+    var ctaId = c.getAttribute('data-cta') || 'unmarked';
+    var ctaText = (c.textContent || '').trim().slice(0, 60);
+    var href = c.getAttribute('href') || '';
+    var specific = classifyHref(href);
+    if (specific) {
+      window.bordoTrack(specific, { cta_id: ctaId, cta_text: ctaText, link_url: href });
+    }
+    window.bordoTrack('cta_click', { cta_id: ctaId, cta_text: ctaText, link_url: href });
   }, true);
+
+  /* ---------- Engagement: scroll depth, time, FAQ, section views ---------- */
+  // Scroll depth (25/50/75/90)
+  var scrollMarks = [25, 50, 75, 90];
+  var scrollFired = {};
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = (doc.scrollHeight - doc.clientHeight) || 1;
+    var pct = Math.round((window.scrollY / max) * 100);
+    for (var i = 0; i < scrollMarks.length; i++) {
+      var m = scrollMarks[i];
+      if (pct >= m && !scrollFired[m]) {
+        scrollFired[m] = true;
+        window.bordoTrack('scroll_' + m);
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // 60s engagement (only if tab visible & user interacted)
+  var engaged = false;
+  var visibleSeconds = 0;
+  var lastInteraction = Date.now();
+  ['mousemove', 'keydown', 'scroll', 'touchstart', 'click'].forEach(function (ev) {
+    window.addEventListener(ev, function () { lastInteraction = Date.now(); }, { passive: true });
+  });
+  setInterval(function () {
+    if (document.hidden) return;
+    if (Date.now() - lastInteraction > 30000) return; // idle
+    visibleSeconds += 1;
+    if (visibleSeconds >= 60 && !engaged) {
+      engaged = true;
+      window.bordoTrack('engaged_60s');
+    }
+  }, 1000);
+
+  // FAQ open
+  document.addEventListener('click', function (e) {
+    var q = e.target.closest('.faq-q');
+    if (!q) return;
+    var item = q.closest('.faq-item');
+    var wasOpen = item && item.classList.contains('open');
+    // FAQ toggle handler in HTML runs after this (event capture order); detect "will open"
+    if (!wasOpen) {
+      var qText = (q.textContent || '').trim().slice(0, 80);
+      window.bordoTrack('faq_open', { faq_question: qText });
+    }
+  }, true);
+
+  // Section view tracking (pricing, before/after gallery)
+  function watchSection(selector, eventName) {
+    var el = document.querySelector(selector);
+    if (!el || !('IntersectionObserver' in window)) return;
+    var fired = false;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && !fired) {
+          fired = true;
+          window.bordoTrack(eventName);
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(el);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      watchSection('#pricing', 'pricing_view');
+      watchSection('#ba, .ba-track, [data-section="before-after"]', 'gallery_view');
+    });
+  } else {
+    watchSection('#pricing', 'pricing_view');
+    watchSection('#ba, .ba-track, [data-section="before-after"]', 'gallery_view');
+  }
 })();
