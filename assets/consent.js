@@ -136,7 +136,6 @@
   function loadMetaPixel() {
     if (metaPixelLoaded || !META_PIXEL_ID) return;
     metaPixelLoaded = true;
-    // Official Meta snippet, adapted
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -150,8 +149,7 @@
     window.fbq('track', 'PageView');
   }
 
-  /* Map our dataLayer events to Meta Pixel standard/custom events.
-     Called only when marketing consent is granted. */
+  /* Mirror dataLayer events to Meta Pixel. No-op if pixel not yet loaded. */
   function fbqTrack(eventName, params) {
     if (!window.fbq) return;
     var p = params || {};
@@ -322,7 +320,6 @@
       Object.keys(params).forEach(function (k) { payload[k] = params[k]; });
     }
     window.dataLayer.push(payload);
-    // Mirror to Meta Pixel — fires only if marketing consent was granted (pixel loaded)
     try { fbqTrack(eventName, params); } catch (e) {}
   };
 

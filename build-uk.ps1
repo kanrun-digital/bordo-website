@@ -1,4 +1,4 @@
-﻿# Builds UA version from current PL index.html.
+# Builds UA version from current PL index.html.
 # Re-run any time PL is updated.
 $src = 'D:\bordo salon\site\index.html'
 $dst = 'D:\bordo salon\site\uk\index.html'
@@ -175,16 +175,16 @@ $h = $h.Replace('Cztery kierunki, jedna estetyka. Pracujemy bez pośpiechu, z ko
                 'Чотири напрями, одна естетика. Працюємо без поспіху, з&nbsp;консультацією на початку та&nbsp;смачною кавою чи&nbsp;чаєм ☕️')
 $h = $h.Replace('<div class="caption">Procedura · 90–120 min</div>
         <div class="title">Rzęsy</div>
-        <div class="desc">Naturalne lub spektakularne, efekt na trzy do czterech tygodni.</div>',
+        <div class="desc">Naturalne lub spektakularne, efekt do 5 tygodni.</div>',
                 '<div class="caption">Процедура · 90–120 хв</div>
         <div class="title">Вії</div>
-        <div class="desc">Натуральні або яскраві, ефект на три-чотири тижні.</div>')
+        <div class="desc">Натуральні або яскраві, ефект до 5 тижнів.</div>')
 $h = $h.Replace('<div class="caption">Procedura · 60 min</div>
         <div class="title">Brwi</div>
-        <div class="desc">Architektura, henna pudrowa, laminacja, naturalna forma na każdy dzień.</div>',
+        <div class="desc">Architektura, henna, laminacja, naturalna forma na każdy dzień.</div>',
                 '<div class="caption">Процедура · 60 хв</div>
         <div class="title">Брови</div>
-        <div class="desc">Архітектура, пудрова хна, ламінація, натуральна форма на кожен день.</div>')
+        <div class="desc">Архітектура, хна, ламінація, натуральна форма на кожен день.</div>')
 $h = $h.Replace('<div class="caption">Procedura · 15–60 min</div>
         <div class="title">Laser</div>
         <div class="desc">Bezpiecznie, bezboleśnie, dla każdego typu skóry, z testem przed cyklem.</div>',
@@ -502,9 +502,19 @@ $h = $h.Replace('<a href="mailto:youngandbeautiful.wro@gmail.com?subject=Pytanie
 $h = $h.Replace('<a href="mailto:youngandbeautiful.wro@gmail.com?subject=Pytanie%20o%20regulamin">Regulamin</a>',
                 '<a href="mailto:youngandbeautiful.wro@gmail.com?subject=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82">Регламент</a>')
 
+# === Cookie consent footer link (banner texts are translated in consent.js by <html lang>) ===
+$h = $h.Replace('<a href="#" data-bc-open>Ustawienia cookies</a>',
+                '<a href="#" data-bc-open>Налаштування cookies</a>')
+
+# === Google Maps embed: locale params + title ===
+$h = $h.Replace('!3m2!1spl!2spl!4v', '!3m2!1suk!2spl!4v')
+$h = $h.Replace('!5m2!1spl!2spl', '!5m2!1suk!2spl')
+$h = $h.Replace('title="Mapa · Bordo Beauty Studio, Władysława Jagiełły 3/7, Wrocław"',
+                'title="Мапа · Bordo Beauty Studio, Władysława Jagiełły 3/7, Вроцлав"')
+
 # === Sticky mobile ===
 $h = $h.Replace('class="btn btn-primary" data-cta="sticky-booksy">Zarezerwuj</a>',
                 'class="btn btn-primary" data-cta="sticky-booksy">Записатися</a>')
 
-[System.IO.File]::WriteAllText($dst, $h, (New-Object System.Text.UTF8Encoding $false))
+[System.IO.File]::WriteAllText($dst, $h, (New-Object System.Text.UTF8Encoding $true))
 "UA built: $dst ($([System.IO.File]::ReadAllBytes($dst).Length) bytes)"
