@@ -4,232 +4,131 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Політика конфіденційності — Bordo Beauty Studio</title>
-<meta name="description" content="Політика конфіденційності Bordo Beauty Studio у Вроцлаві. Правила обробки персональних даних, cookies, RODO/GDPR.">
+<meta name="description" content="Політика конфіденційності Bordo Beauty Studio у Вроцлаві. Правила обробки персональних даних відповідно до RODO/GDPR.">
 <meta name="theme-color" content="#5C1A1B">
 <meta name="robots" content="noindex,follow">
-
 <link rel="canonical" href="https://youngandbeautiful.pl/uk/polityka-konfidentsiynosti">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="/assets/consent.css">
 <script src="/assets/consent.js"></script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJHS8Z3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=417578251392902&ev=PageView&noscript=1"/></noscript>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --bordo: #5C1A1B;
-    --bordo-light: #7a2323;
     --bg: #faf8f5;
     --text: #1a1a1a;
-    --text-muted: #666;
+    --muted: #666;
     --border: #e8e0d8;
-    --max-w: 760px;
+    --w: 760px;
   }
-
   html { font-size: 16px; scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  .site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: #fff; border-bottom: 1px solid var(--border); padding: 0 24px;
   }
   .nav-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
+    max-width: var(--w); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; height: 56px;
   }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo img { height: 28px; }
+  .nav-logo img { height: 28px; display: block; }
   .nav-back {
-    font-size: 13px;
-    color: var(--text-muted);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color .2s;
+    font-size: 13px; color: var(--muted); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: color .2s;
   }
   .nav-back:hover { color: var(--bordo); }
-  .nav-back svg { width: 16px; height: 16px; }
-
-  .page-wrap {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 48px 24px 80px;
+  .nav-back svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .wrap { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
+  .doc-header { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+  .label {
+    font-size: 11px; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--bordo); margin-bottom: 12px;
   }
-
-  .page-header {
-    margin-bottom: 48px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--border);
-  }
-  .page-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--bordo);
-    margin-bottom: 12px;
-  }
-  .page-title {
+  h1 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 400;
-    line-height: 1.15;
-    color: var(--text);
-    margin-bottom: 16px;
+    font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px;
   }
-  .page-meta {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  .legal-notice {
-    background: #fff8e7;
-    border: 1px solid #f0d98c;
-    border-left: 4px solid #e6b800;
-    border-radius: 6px;
-    padding: 16px 20px;
-    margin-bottom: 40px;
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #5a4a00;
-  }
-  .legal-notice strong { color: #3d3200; }
-
-  .legal-body h2 {
+  .meta { font-size: 13px; color: var(--muted); }
+  .body h2 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 48px 0 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
+    font-size: 1.6rem; font-weight: 500;
+    margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
   }
-  .legal-body h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 28px 0 10px;
-    color: var(--text);
+  .body h3 { font-size: 1rem; font-weight: 600; margin: 28px 0 10px; }
+  .body p { font-size: 15px; margin-bottom: 14px; }
+  .body ul, .body ol { font-size: 15px; margin: 10px 0 14px 20px; }
+  .body li { margin-bottom: 6px; }
+  .body a { color: var(--bordo); text-decoration: underline; }
+  .body a:hover { opacity: .8; }
+  .body strong { font-weight: 600; }
+  .body em { font-style: italic; }
+  .body table {
+    width: 100%; border-collapse: collapse; font-size: 14px;
+    margin: 16px 0 24px; display: block; overflow-x: auto;
   }
-  .legal-body p {
-    margin-bottom: 14px;
-    font-size: 15px;
+  .body th {
+    background: #f3ede6; text-align: left; padding: 10px 14px;
+    font-weight: 600; font-size: 13px; border-bottom: 2px solid var(--border);
   }
-  .legal-body ul, .legal-body ol {
-    margin: 10px 0 14px 20px;
-    font-size: 15px;
+  .body td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .body tr:last-child td { border-bottom: none; }
+  .body code {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px; background: #f0e9e1; padding: 1px 5px; border-radius: 3px;
   }
-  .legal-body li { margin-bottom: 6px; }
-  .legal-body a { color: var(--bordo); text-decoration: underline; }
-  .legal-body a:hover { color: var(--bordo-light); }
-  .legal-body strong { font-weight: 600; }
-
-  .legal-body table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    margin: 16px 0 24px;
-    overflow-x: auto;
-    display: block;
+  footer {
+    background: #fff; border-top: 1px solid var(--border);
+    padding: 24px; text-align: center; font-size: 13px; color: var(--muted);
   }
-  .legal-body th {
-    background: #f3ede6;
-    text-align: left;
-    padding: 10px 14px;
-    font-weight: 600;
-    font-size: 13px;
-    border-bottom: 2px solid var(--border);
-  }
-  .legal-body td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
-  .legal-body tr:last-child td { border-bottom: none; }
-
-  .page-footer {
-    background: #fff;
-    border-top: 1px solid var(--border);
-    padding: 24px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-  .page-footer a { color: var(--bordo); text-decoration: none; }
-  .page-footer a:hover { text-decoration: underline; }
-  .footer-links { display: flex; gap: 16px; justify-content: center; margin-top: 8px; flex-wrap: wrap; }
-
+  footer a { color: var(--bordo); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .foot-links { display: flex; gap: 16px; justify-content: center; margin-top: 8px; flex-wrap: wrap; }
   @media (max-width: 480px) {
-    .page-wrap { padding: 32px 16px 64px; }
-    .legal-body h2 { font-size: 1.35rem; }
+    .wrap { padding: 32px 16px 64px; }
+    .body h2 { font-size: 1.35rem; }
   }
 </style>
 </head>
 <body>
 
-<nav class="site-nav">
+<nav class="nav">
   <div class="nav-inner">
-    <a href="/uk/" class="nav-logo">
-      <img src="/assets/logo.svg" alt="Bordo Beauty Studio">
-    </a>
+    <a href="/uk/" aria-label="Bordo Beauty Studio — головна"><img src="/assets/logo.svg" alt="Bordo Beauty Studio"></a>
     <a href="/uk/" class="nav-back">
-      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
       На головну
     </a>
   </div>
 </nav>
 
 <main>
-<div class="page-wrap">
-
-  <div class="page-header">
-    <div class="page-label">Юридичний документ</div>
-    <h1 class="page-title">Політика конфіденційності</h1>
-    <p class="page-meta">Bordo Beauty Studio · Вроцлав · Останнє оновлення: <strong>[ДАТА ПУБЛІКАЦІЇ — заповнити після юридичної перевірки]</strong></p>
+<div class="wrap">
+  <div class="doc-header">
+    <div class="label">Юридичний документ</div>
+    <h1>Політика конфіденційності</h1>
+    <p class="meta">Bordo Beauty Studio &middot; Останнє оновлення: 2026-07-17</p>
   </div>
 
-  <div class="legal-notice">
-    <strong>Увага перед публікацією:</strong> Цей документ є чернеткою, підготовленою на основі структури RODO/GDPR і практики галузі. Він не є юридичною консультацією і має бути перевірений польським юристом (radca prawny/adwokat, що спеціалізується на RODO і UOKiK) перед публікацією. Усі поля в квадратних дужках <code>[...]</code> — це плейсхолдери, <strong>не можна</strong> публікувати без реальних даних власника.
-  </div>
-
-  <div class="legal-body">
-
-    <p>Ми дбаємо про вашу приватність так само, як дбаємо про кожну деталь вашого візиту до нас. Цей документ простою мовою пояснює, які дані ми збираємо, навіщо, кому їх передаємо і які права у вас у зв'язку з цим є.</p>
+  <div class="body">
+    <p>Ми дбаємо про вашу приватність так само, як дбаємо про кожну деталь вашого візиту до нас. Цей документ простою мовою пояснює, які дані ми збираємо, навіщо, кому їх передаємо і які права у вас у зв'язку з цим є. Там, де закон вимагає точних формулювань, ми зберігаємо точність — але намагаємось не перетворювати цю сторінку на стіну тексту, яку ніхто не читає.</p>
     <p>Якщо після прочитання залишились питання — напишіть нам, контакти в пункті 10.</p>
 
     <h2>1. Адміністратор персональних даних</h2>
     <p>Адміністратором ваших персональних даних є:</p>
     <ul>
-      <li><strong>Назва / ім'я та прізвище підприємця:</strong> [НАЗВА СУБ'ЄКТА / ІМ'Я ТА ПРІЗВИЩЕ ПІДПРИЄМЦЯ], що здійснює діяльність під брендом <strong>Bordo Beauty Studio</strong> (раніше: Young &amp; Beautiful)</li>
-      <li><strong>Організаційно-правова форма:</strong> [ОРГАНІЗАЦІЙНО-ПРАВОВА ФОРМА ДІЯЛЬНОСТІ — уточнити]</li>
-      <li><strong>NIP (податковий номер, Польща):</strong> [NIP]</li>
-      <li><strong>REGON:</strong> [REGON — якщо застосовно]</li>
-      <li><strong>Адреса студії:</strong> вул. Владислава Ягайла 3/7, 50-201 Вроцлав (Śródmieście)</li>
-      <li><strong>Юридична адреса:</strong> [ЮРИДИЧНА АДРЕСА — заповнити, якщо відрізняється від адреси студії]</li>
+      <li><strong>Назва:</strong> BORDO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ <em>(офіційна зареєстрована назва польською мовою)</em>, що здійснює діяльність під брендом <strong>Bordo Beauty Studio</strong> (раніше: Young &amp; Beautiful)</li>
+      <li><strong>Організаційно-правова форма:</strong> spółka z ograniczoną odpowiedzialnością, sp. z o.o. <em>(польська правова форма — за змістом відповідає товариству з обмеженою відповідальністю)</em></li>
+      <li><strong>Номер KRS (Krajowy Rejestr Sądowy — Національний судовий реєстр Польщі):</strong> 0001253653</li>
+      <li><strong>NIP (податковий номер, Польща):</strong> 8982336130</li>
+      <li><strong>REGON:</strong> 54524063000000</li>
+      <li><strong>Юридична адреса:</strong> вул. Владислава Ягайла 3 лок. 7, 50-201 Вроцлав (Śródmieście), Польща</li>
       <li><strong>Телефон:</strong> <a href="tel:+48730377032">+48 730 377 032</a></li>
-      <li><strong>E-mail:</strong> [ЦІЛЬОВА АДРЕСА ДЛЯ ЗВЕРНЕНЬ ЩОДО ПЕРСОНАЛЬНИХ ДАНИХ — заповнити]</li>
+      <li><strong>E-mail:</strong> <a href="mailto:youngandbeautiful.wro@gmail.com">youngandbeautiful.wro@gmail.com</a></li>
     </ul>
     <p><strong>Інспектор з захисту даних (IOD/DPO):</strong> Адміністратор не призначив Інспектора з захисту даних, оскільки характер і масштаб обробки персональних даних не створюють такого обов'язку відповідно до ст. 37 RODO. З усіх питань, пов'язаних із захистом даних, можна звертатися напряму до Адміністратора — контакти в пункті 10.</p>
 
@@ -242,64 +141,42 @@
       <li>прийняття та підтвердження запису,</li>
       <li>підготовки та проведення процедури згідно зі стандартами безпеки,</li>
       <li>організаційного контакту (зміна дати, нагадування про візит),</li>
-      <li>розрахунку за послугу (у тому числі виконання податково-бухгалтерських обов'язків).</li>
+      <li>розрахунку за послугу (у тому числі, за потреби виставлення документа продажу, — виконання податково-бухгалтерських обов'язків).</li>
     </ul>
     <p><strong>Правова підстава:</strong> ст. 6(1)(b) RODO (необхідність для виконання договору / вжиття заходів до його укладення на ваш запит), а щодо бухгалтерських документів — ст. 6(1)(c) RODO (юридичний обов'язок Адміністратора).</p>
 
-    <h3>б) Маркетинг, ретаргетинг і вимірювання ефективності реклами</h3>
-    <p>На нашому сайті працюють аналітичні та рекламні інструменти (Meta Pixel/CAPI, Google Tag Manager, Google Analytics, Google Ads), які дозволяють вимірювати трафік, розуміти, що вас цікавить, і показувати релевантну рекламу в Meta (Facebook/Instagram) та Google. <strong>Ці інструменти вмикаються виключно після вашої явної згоди</strong>, наданої в банері cookie на сайті — вони не працюють за замовчуванням і не спираються на «законний інтерес».</p>
-    <p><strong>Правова підстава:</strong> ст. 6(1)(a) RODO (згода). Згоду можна відкликати в будь-який момент — див. пункт 8.</p>
+    <h3>б) Маркетинг, ретаргетинг і вимірювання ефективності реклами (Meta Pixel, Google Tag Manager, Google Analytics, Google Ads)</h3>
+    <p>На нашому сайті працюють аналітичні та рекламні інструменти, які дозволяють вимірювати трафік, розуміти, що вас цікавить, і показувати релевантну рекламу в Meta (Facebook/Instagram) та Google. <strong>Ці інструменти вмикаються виключно після вашої явної згоди</strong>, наданої в банері cookie на сайті — вони не працюють за замовчуванням і не спираються на «законний інтерес». Наразі ми використовуємо виключно браузерний (client-side) Meta Pixel — server-side Meta Conversions API (CAPI) не впроваджено.</p>
+    <p><strong>Правова підстава:</strong> ст. 6(1)(a) RODO (згода) у поєднанні з нормами про електронні комунікації (т.з. «cookie law», імплементація Директиви 2002/58/ЄС, у Польщі — Закон про телекомунікації / Закон про надання послуг електронним шляхом). Згоду можна відкликати в будь-який момент — див. пункт 8.</p>
 
-    <h3>в) Відповіді на повідомлення (WhatsApp, e-mail)</h3>
+    <h3>в) Відповіді на повідомлення (WhatsApp, e-mail, контактна форма)</h3>
     <p>Коли ви пишете нам у WhatsApp, на e-mail або через форму на сайті, ми обробляємо надані вами дані з метою відповіді та обробки вашого запиту.</p>
-    <p><strong>Правова підстава:</strong> ст. 6(1)(b) RODO (дії до укладення договору на ваш запит) або ст. 6(1)(f) RODO (законний інтерес Адміністратора), залежно від змісту повідомлення.</p>
+    <p><strong>Правова підстава:</strong> ст. 6(1)(b) RODO (дії до укладення договору на ваш запит) або ст. 6(1)(f) RODO (законний інтерес Адміністратора, що полягає в обробці запитів клієнток), залежно від змісту повідомлення.</p>
 
     <h2>3. Отримувачі даних — кому ми передаємо ваші дані</h2>
     <p>Ваші дані можуть передаватися таким категоріям отримувачів, виключно в обсязі, необхідному для реалізації цілей, описаних у пункті 2:</p>
-
     <table>
-      <thead>
-        <tr><th>Отримувач</th><th>Роль</th><th>Обсяг даних</th></tr>
-      </thead>
+      <thead><tr><th>Отримувач</th><th>Роль</th><th>Обсяг даних</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Booksy</strong> (Booksy International sp. z o.o.)</td>
-          <td>Система онлайн-запису</td>
-          <td>Ім'я, телефон, історія візитів, обрана послуга</td>
-        </tr>
-        <tr>
-          <td><strong>Meta Platforms Ireland Ltd.</strong> (Meta Pixel, Meta CAPI, WhatsApp Business)</td>
-          <td>Реклама, ретаргетинг, комунікація</td>
-          <td>Дані подій перегляду (Pixel), зміст і номер контакту (WhatsApp)</td>
-        </tr>
-        <tr>
-          <td><strong>Google Ireland Ltd.</strong> (Google Tag Manager, Google Analytics 4, Google Ads, Google Fonts)</td>
-          <td>Аналітика, реклама, доставка шрифтів</td>
-          <td>Дані подій на сайті, IP-адреса</td>
-        </tr>
-        <tr>
-          <td><strong>Провайдер хостингу сайту</strong></td>
-          <td>Обслуговування серверної інфраструктури</td>
-          <td>Технічні дані (лог-файли сервера, IP-адреса) — [УТОЧНИТИ: Vercel або Netlify]</td>
-        </tr>
-        <tr>
-          <td><strong>Органи, уповноважені на підставі законодавства</strong></td>
-          <td>напр. податкові органи, правоохоронні органи</td>
-          <td>В обсязі, що випливає з чинного законодавства</td>
-        </tr>
+        <tr><td><strong>Booksy</strong> (Booksy International sp. z o.o.)</td><td>Система онлайн-запису</td><td>Ім'я, телефон, історія візитів, обрана послуга</td></tr>
+        <tr><td><strong>Meta Platforms Ireland Ltd.</strong> (Meta Pixel — браузерний, WhatsApp Business)</td><td>Реклама, ретаргетинг, комунікація</td><td>Дані подій перегляду (Pixel), зміст і номер контакту (WhatsApp)</td></tr>
+        <tr><td><strong>Google Ireland Ltd.</strong> (Google Tag Manager, Google Analytics 4, Google Ads, Google Fonts)</td><td>Аналітика, реклама, доставка шрифтів</td><td>Дані подій на сайті, IP-адреса (у контексті завантаження шрифтів і вимірювання трафіку)</td></tr>
+        <tr><td><strong>Netlify, Inc.</strong> (хостинг/обслуговування сайту) і <strong>Cloudflare, Inc.</strong> (CDN/проксі DNS перед Netlify)</td><td>Обслуговування серверної інфраструктури та мережі доставки контенту</td><td>Технічні дані (лог-файли сервера, IP-адреса)</td></tr>
+        <tr><td><strong>Органи, уповноважені на підставі законодавства</strong></td><td>напр. податкові органи, правоохоронні органи</td><td>В обсязі, що випливає з чинного законодавства</td></tr>
       </tbody>
     </table>
-
     <p>Ми не продаємо ваші персональні дані жодним третім особам.</p>
+    <p>Ми використовуємо власне, авторське рішення банера cookie (Google Consent Mode v2) — це не сторонній постачальник на кшталт Cookiebot чи Iubenda.</p>
 
     <h2>4. Передача даних за межі Європейської економічної зони (ЄЕЗ)</h2>
-    <p>Частина отримувачів, зазначених у пункті 3 — зокрема <strong>Meta Platforms</strong> і <strong>Google</strong> — це компанії зі штаб-квартирою в США або такі, що передають дані в центри обробки за межами ЄЕЗ. Ми говоримо про це відкрито.</p>
-    <p>Така передача здійснюється на підставі механізмів, передбачених RODO, зокрема <strong>стандартних договірних застережень (Standard Contractual Clauses, SCC)</strong>, затверджених Європейською комісією. Ви можете попросити більше інформації, звернувшись до нас (пункт 10).</p>
+    <p>Частина отримувачів, зазначених у пункті 3 — зокрема <strong>Meta Platforms</strong>, <strong>Google</strong>, <strong>Netlify</strong> і <strong>Cloudflare</strong> — це компанії зі штаб-квартирою в США або такі, що передають дані в центри обробки за межами ЄЕЗ.</p>
+    <p>Така передача здійснюється на підставі механізмів, передбачених RODO, зокрема <strong>стандартних договірних застережень (Standard Contractual Clauses, SCC)</strong>, затверджених Європейською комісією, якими охоплені ці постачальники в рамках своїх умов обробки даних для бізнес-клієнтів з ЄС. Ви можете попросити більше інформації з цього приводу, звернувшись до нас (пункт 10).</p>
 
     <h2>5. Строк зберігання даних</h2>
+    <p>Ми намагаємось не зберігати ваші дані довше, ніж це потрібно:</p>
     <ul>
-      <li><strong>Дані, пов'язані із записом і проведенням візиту</strong> — протягом часу співпраці та до закінчення строку позовної давності щодо можливих вимог за договором про надання послуг (за загальним правилом — 6 років від кінця року, у якому було надано послугу) або до закінчення обов'язків, що випливають із податково-бухгалтерського законодавства.</li>
-      <li><strong>Дані, що обробляються на підставі маркетингової згоди</strong> (Meta Pixel/CAPI, Google Analytics, Google Ads) — до моменту відкликання згоди. Ваш вибір щодо cookie технічно запам'ятовується протягом 180 днів, після чого банер згоди з'явиться знову.</li>
+      <li><strong>Дані, пов'язані із записом і проведенням візиту</strong> — протягом часу співпраці та до закінчення строку позовної давності щодо можливих вимог за договором про надання послуг (за загальним правилом — 6 років від кінця року, у якому було надано послугу) або до закінчення обов'язків, що випливають із податково-бухгалтерського законодавства (якщо застосовно). У частині, в якій дані запису обробляються безпосередньо в системі Booksy, Booksy виступає самостійним адміністратором/процесором цих даних згідно з власною політикою конфіденційності Booksy.</li>
+      <li><strong>Дані, що обробляються на підставі маркетингової згоди</strong> (Meta Pixel, Google Analytics, Google Ads) — до моменту відкликання згоди. Ваш вибір щодо cookie технічно запам'ятовується протягом 180 днів, після чого банер згоди з'явиться знову.</li>
       <li><strong>Листування (WhatsApp, e-mail)</strong> — протягом часу, потрібного для обробки запиту, а потім протягом строку, виправданого можливою потребою підтвердити перебіг комунікації, не довше строку позовної давності.</li>
     </ul>
 
@@ -310,68 +187,49 @@
       <li><strong>виправлення</strong> даних, якщо вони неправильні або неповні (ст. 16 RODO),</li>
       <li><strong>видалення</strong> даних («право бути забутою», ст. 17 RODO),</li>
       <li><strong>обмеження обробки</strong> (ст. 18 RODO),</li>
-      <li><strong>перенесення даних</strong> до іншого адміністратора (ст. 20 RODO),</li>
+      <li><strong>перенесення даних</strong> до іншого адміністратора, в обсязі, у якому дані обробляються на підставі згоди або договору і в автоматизований спосіб (ст. 20 RODO),</li>
       <li><strong>заперечення</strong> проти обробки, що ґрунтується на законному інтересі Адміністратора (ст. 21 RODO),</li>
-      <li><strong>відкликання згоди</strong> в будь-який момент — на практиці: ви можете змінити свій вибір щодо cookie в будь-який момент у футері сайту («Налаштування cookies»).</li>
+      <li><strong>відкликання згоди</strong> в будь-який момент, без впливу на законність обробки, здійсненої до її відкликання (ст. 7(3) RODO) — на практиці: ви можете змінити свій вибір щодо cookie в будь-який момент у футері сайту («Налаштування cookies»).</li>
     </ul>
-    <p>Щоб скористатися будь-яким із цих прав, напишіть нам — контакти в пункті 10. Ми відповімо, як правило, протягом місяця з моменту отримання запиту.</p>
+    <p>Щоб скористатися будь-яким із цих прав, напишіть нам — контакти в пункті 10. Ми відповімо без зайвої затримки, як правило протягом місяця з моменту отримання запиту.</p>
 
     <h2>7. Право подати скаргу до наглядового органу</h2>
     <p>Якщо ви вважаєте, що ми обробляємо ваші дані з порушенням закону, ви маєте право подати скаргу до польського наглядового органу:</p>
-    <p><strong>Prezes Urzędu Ochrony Danych Osobowych (UODO)</strong><br>
+    <p><strong>Prezes Urzędu Ochrony Danych Osobowych (UODO)</strong> — Голова Управління захисту персональних даних Польщі<br>
     ul. Stawki 2, 00-193 Warszawa<br>
     <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a></p>
     <p>Нам буде приємно, якщо ви спершу дасте нам шанс з'ясувати ситуацію напряму — але це завжди ваш вибір і ваше право.</p>
 
     <h2>8. Файли cookie</h2>
-    <p>Наш сайт використовує файли cookie та подібні технології, якими керує власний банер згоди (з'являється під час першого відвідування сайту, а також доступний повторно через посилання «Налаштування cookies» у футері).</p>
-
+    <p>Наш сайт використовує файли cookie та подібні технології, якими керує власний банер згоди (з'являється під час першого відвідування сайту, а також доступний повторно через посилання «Налаштування cookies» у футері). Ми поділяємо їх на три категорії:</p>
     <table>
-      <thead>
-        <tr><th>Категорія</th><th>Мета</th><th>Приклади</th><th>Потребує згоди?</th></tr>
-      </thead>
+      <thead><tr><th>Категорія</th><th>Мета</th><th>Приклади</th><th>Потребує згоди?</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Необхідні</strong></td>
-          <td>Базова робота сайту, напр. запам'ятовування вашого вибору щодо cookie</td>
-          <td>Cookie/localStorage <code>bordo_consent</code></td>
-          <td>Ні — завжди активні</td>
-        </tr>
-        <tr>
-          <td><strong>Аналітичні</strong></td>
-          <td>Анонімна статистика трафіку</td>
-          <td>Google Analytics 4 (Google Tag Manager, контейнер <code>GTM-NJHS8Z3L</code>)</td>
-          <td>Так</td>
-        </tr>
-        <tr>
-          <td><strong>Маркетингові</strong></td>
-          <td>Реклама та вимірювання її ефективності</td>
-          <td>Google Ads, Meta Pixel (id <code>417578251392902</code>) та Meta Conversions API</td>
-          <td>Так</td>
-        </tr>
+        <tr><td><strong>Необхідні</strong></td><td>Базова робота сайту, напр. запам'ятовування вашого вибору щодо cookie</td><td>Cookie/localStorage <code>bordo_consent</code></td><td>Ні — завжди активні</td></tr>
+        <tr><td><strong>Аналітичні</strong></td><td>Анонімна статистика трафіку</td><td>Google Analytics 4 (через Google Tag Manager, контейнер <code>GTM-NJHS8Z3L</code>)</td><td>Так</td></tr>
+        <tr><td><strong>Маркетингові</strong></td><td>Реклама та вимірювання її ефективності</td><td>Google Ads, Meta Pixel — браузерний (id <code>417578251392902</code>)</td><td>Так</td></tr>
       </tbody>
     </table>
-
-    <p><strong>Як це працює технічно:</strong> до моменту вашого вибору в банері всі категорії, окрім необхідної, за замовчуванням <strong>вимкнені</strong> (Google Consent Mode v2, режим «denied»). Аналітичні та рекламні скрипти завантажуються лише після вашої згоди на відповідну категорію. Свій вибір можна змінити будь-коли — посилання «Налаштування cookies» знаходиться у футері сайту.</p>
-    <p><strong>Шрифти Google (Google Fonts):</strong> сайт наразі завантажує шрифти безпосередньо із серверів Google (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>), що пов'язано з передачею IP-адреси Google під час кожного завантаження сторінки — незалежно від вашої згоди на аналітичні/маркетингові cookie.</p>
+    <p>До моменту вашого вибору в банері всі категорії, окрім необхідної, за замовчуванням <strong>вимкнені</strong> (Google Consent Mode v2, режим «denied»). Аналітичні та рекламні скрипти завантажуються лише після вашої згоди на відповідну категорію. Свій вибір можна змінити будь-коли — посилання «Налаштування cookies» знаходиться у футері сайту. Сайт додатково містить статичний тег <code>&lt;noscript&gt;</code> (резервний піксель Meta та iframe GTM), призначений виключно на випадок браузера з вимкненим JavaScript — це частина того самого механізму згоди, описаного вище, а не окремий незалежний трекер.</p>
+    <p><strong>Шрифти Google (Google Fonts):</strong> сайт наразі завантажує шрифти безпосередньо із серверів Google (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>), що пов'язано з передачею IP-адреси Google під час кожного завантаження сторінки — незалежно від вашої згоди на аналітичні/маркетингові cookie, оскільки це технічний ресурс, який завантажується безпосередньо в коді сторінки, а не через банер згоди.</p>
 
     <h2>9. Добровільність надання даних</h2>
     <p>Надання персональних даних завжди є добровільним. Проте без надання необхідного мінімуму даних (напр. імені та номера телефону під час запису) ми не зможемо підтвердити чи провести ваш візит. Згода на аналітичні/маркетингові cookie є повністю опційною і не впливає на можливість користування нашими послугами чи доступ до контенту сайту.</p>
 
     <h2>10. Контакти з питань персональних даних</h2>
+    <p>З будь-якого питання, пов'язаного із захистом ваших персональних даних, ви можете звернутися до нас:</p>
     <ul>
       <li><strong>Телефон / WhatsApp:</strong> <a href="tel:+48730377032">+48 730 377 032</a></li>
-      <li><strong>E-mail:</strong> [ЦІЛЬОВА АДРЕСА E-MAIL — заповнити]</li>
+      <li><strong>E-mail:</strong> <a href="mailto:youngandbeautiful.wro@gmail.com">youngandbeautiful.wro@gmail.com</a></li>
       <li><strong>Адреса:</strong> вул. Владислава Ягайла 3/7, 50-201 Вроцлав</li>
     </ul>
-
-  </div><!-- /legal-body -->
-</div><!-- /page-wrap -->
+  </div>
+</div>
 </main>
 
-<footer class="page-footer">
-  <div>© 2026 Bordo Beauty Studio · Вроцлав</div>
-  <div class="footer-links">
+<footer>
+  <div>&copy; 2026 Bordo Beauty Studio &middot; Вроцлав</div>
+  <div class="foot-links">
     <a href="/uk/polityka-konfidentsiynosti">Політика конфіденційності</a>
     <a href="/uk/reglament">Регламент</a>
     <a href="#" data-bc-open>Налаштування cookies</a>
